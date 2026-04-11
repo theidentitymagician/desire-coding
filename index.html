@@ -1280,8 +1280,12 @@ details[open] .faq-icon {
   transform: rotate(45deg);
 }
 .faq-answer {
+  display: none;
   overflow: hidden;
   padding-bottom: 28px;
+}
+details[open] .faq-answer {
+  display: block;
 }
 .faq-answer p {
   font-family: 'DM Sans', sans-serif;
