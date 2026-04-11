@@ -1296,34 +1296,7 @@ details[open] .faq-answer {
 }
 </style>
 
-<script>
-function toggleFaq(btn) {
-  const answer = btn.nextElementSibling;
-  const isOpen = btn.getAttribute('aria-expanded') === 'true';
 
-  // Close all
-  document.querySelectorAll('.faq-question').forEach(q => {
-    q.setAttribute('aria-expanded', 'false');
-    q.nextElementSibling.classList.remove('open');
-  });
-
-  // Open this one if it was closed
-  if (!isOpen) {
-    btn.setAttribute('aria-expanded', 'true');
-    answer.classList.add('open');
-  }
-}
-
-// iOS Safari touch fix
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.faq-question').forEach(function(btn) {
-    btn.addEventListener('touchend', function(e) {
-      e.preventDefault();
-      toggleFaq(this);
-    });
-  });
-});
-</script>
 
 <!-- FOOTER -->
 <footer>
